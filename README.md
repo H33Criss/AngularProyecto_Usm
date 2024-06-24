@@ -38,6 +38,6 @@
 
 <br clear="both" />
 
-<h3 align="left">💻 Levantar el proyecto test renato plaza diaz \n cristobal weco</h3>
+<h3 align="left">💻 Levantar el proyecto </h3>
 
 ###
