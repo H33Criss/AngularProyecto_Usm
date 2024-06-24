@@ -24,7 +24,7 @@
 
 ###
 
-<img align="left" height="60" src="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png"  />
+<img align="left" height="63" src="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png"  />
 
 ###
 
@@ -34,7 +34,7 @@
 
 ###
 
-<br clear="both" />
+<!-- <br clear="both" /> -->
 
 <h3 align="left">💻 Levantar el proyecto</h3>
 
