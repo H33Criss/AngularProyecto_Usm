@@ -30,7 +30,7 @@
 
 <br/>
 
-<a style="display: inline-block; margin-bottom: 5px;" align="left"  href="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png" target="_blank" >Ir al PDF</a>
+<a style="display: inline-block; margin-bottom: 20px;" align="left"  href="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png" target="_blank" >Ir al PDF</a>
 
 ###
 
