@@ -28,9 +28,9 @@
 
 ###
 
-<!-- <br/> -->
+<br/>
 
-<a style="display: block; margin-top: 30px !important;" align="left"  href="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png" target="_blank" >Ir al PDF</a>
+<a  align="left"  href="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png" target="_blank" >Ir al PDF</a>
 
 ###
 
