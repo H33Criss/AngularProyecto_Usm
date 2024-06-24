@@ -26,8 +26,6 @@
 
 ###
 
-<br clear="both">
-
 <img align="left" height="50" src="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png"  />
 
 ###
@@ -35,8 +33,6 @@
 <h4 align="left">https//:</h4>
 
 ###
-
-<br clear="both">
 
 <h3 align="left">💻 Levantar el proyecto</h3>
 
