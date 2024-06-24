@@ -36,7 +36,7 @@
 
 ###
 
-<div clear="both" />
+<div height="10" clear="both" />
 
 <h3 align="left">💻 Levantar el proyecto</h3>
 
