@@ -1,0 +1,33 @@
+.toolbar-container {
+  height: calc(100vh * 0.08);
+  width: 100%;
+  display: flex;
+  background-color: #810081;
+}
+
+.flex-config {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.logo {
+  width: 30%;
+}
+
+.navbar-options {
+  width: 50%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 10px 0px;
+}
+
+.actions {
+  width: 20%;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}

@@ -1,0 +1,26 @@
+<mat-toolbar color="primary" class="toolbar-container mat-primary">
+  <div class="logo flex-config">
+    <h1>ACER</h1>
+  </div>
+  <div class="navbar-options">
+    <a mat-button routerLink="/">Page1</a>
+    <a mat-button routerLink="/portafolio"> Page2 </a>
+    <a mat-button routerLink="/portafolio"> Page3 </a>
+    <a mat-button routerLink="/portafolio"> Page4 </a>
+    <a mat-button routerLink="/portafolio"> Page5 </a>
+
+
+  </div>
+  <div class="actions flex-config">
+    <button color="primary" mat-fab extended [matMenuTriggerFor]="menu">
+      <mat-icon>person</mat-icon>
+      Hola
+    </button>
+
+    <mat-menu #menu="matMenu">
+      <button mat-menu-item routerLink="/profile">Profile</button>
+      <button mat-menu-item>Logout</button>
+    </mat-menu>
+  </div>
+
+</mat-toolbar>
