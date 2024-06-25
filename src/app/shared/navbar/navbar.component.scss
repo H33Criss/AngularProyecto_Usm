@@ -6,7 +6,8 @@
 }
 .active-link {
   text-transform: uppercase;
-  color: #4c0196 !important;
+  // color: #4c0196 !important;
+  text-shadow: #ffffff 1px 0 10px;
   transition: all 0.5s;
   transform: scale(1.02) translate(0px, -1px);
 }
