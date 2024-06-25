@@ -1,14 +1,6 @@
 @use "@angular/material" as mat;
-@include mat.core();
 
-// $theme: mat.define-theme(
-//   (
-//     color: (
-//       theme-type: dark,
-//       primary: mat.$violet-palette
-//     )
-//   )
-// );
+@include mat.core();
 body {
   padding: 0;
   margin: 0;
@@ -16,13 +8,29 @@ body {
 html,
 body {
   height: 100%;
-  // @include mat.core-theme($theme);
-  // @include mat.toolbar-theme($theme);
 }
 body {
-  margin: 0;
-  font-family: Roboto, "Helvetica Neue", sans-serif;
+  margin: 0 !important;
+}
+/* Aplicar la fuente a los componentes de Angular Material */
+.mat-typography,
+.mat-button,
+.mat-card,
+.mat-input,
+.mat-form-field,
+.mat-toolbar,
+* {
+  font-family: "Prompt", cursive !important;
+  // font-optical-sizing: auto !important;
+}
+/* Excluir mat-icon de la fuente global */
+.mat-icon {
+  font-family: "Material Icons" !important;
 }
 
-// Incluir los estilos de Angular Material
-// @include angular-material-theme($theme);
+.cursive-title {
+  font-family: "Kaushan Script", cursive !important;
+  font-optical-sizing: auto !important;
+  font-style: normal !important;
+  font-size: 30px !important;
+}

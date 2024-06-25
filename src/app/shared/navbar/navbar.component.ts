@@ -8,12 +8,15 @@ import {
 } from '@angular/material/button';
 import { MatMenuItem, MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
+import { routes } from '../../app.routes';
 
 @Component({
   selector: 'app-shared-navbar',
   standalone: true,
   imports: [
     CommonModule,
+    RouterModule,
     MatButton,
     MatToolbar,
     MatIcon,
@@ -25,4 +28,6 @@ import { CommonModule } from '@angular/common';
   templateUrl: './navbar.component.html',
   styleUrl: './navbar.component.scss',
 })
-export class NavbarComponent {}
+export class NavbarComponent {
+  public menuItems = routes;
+}
