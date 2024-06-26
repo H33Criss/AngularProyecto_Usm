@@ -41,11 +41,14 @@
 <h3 align="left">💻 Levantar el proyecto </h3>
 
 ###
-
 ```bash
 npm install
 ng serve
 ```
+###
 
+<br clear="both" />
+
+<h3 align="left">➕ Variables de entorno</h3>
 
 ###
