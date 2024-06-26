@@ -41,3 +41,11 @@
 <h3 align="left">💻 Levantar el proyecto </h3>
 
 ###
+
+```bash
+npm install
+ng serve
+```
+
+
+###
