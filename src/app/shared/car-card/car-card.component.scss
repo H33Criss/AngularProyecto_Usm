@@ -1,0 +1,65 @@
+.center {
+    justify-content: center;
+    width: 100%;
+}
+
+.cardHeader {
+    justify-content: center;
+    padding-bottom: 16px;
+    font-size: 25px;
+}
+
+.detailButton {
+    justify-content: center;
+    width: 100%;
+    padding-top: auto;
+    border-radius: 0 0 5px 5px;
+
+}
+
+.detailButtonText {
+    color: white;
+}
+
+.card {
+    width: 300px;
+    height: 427px;
+    color: white;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mdc-card__actions {
+    padding: 0px;
+}
+
+.carDescription {
+    padding: 0px 8px 16px 8px;
+    font-size: 11px;
+    text-align: start;
+}
+
+.carImage {
+    padding: 24px 12px 24px 12px;
+    width: 100%;
+    height: 177px;
+}
+
+.container {
+    padding: 12px 0px 12px 0px;
+}
+
+.cardFooter {
+    position: absolute;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+.likeButton {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    color: #810081;
+}
