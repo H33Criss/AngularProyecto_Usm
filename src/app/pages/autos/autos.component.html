@@ -1,9 +1,19 @@
-<p>
+<!-- <p>
   Lista de autos: Una galería o lista de los autos que están en exhibición.
   Filtros: Opciones para filtrar por marca, modelo, año, etc.
   Detalle del auto: Página individual para cada auto con fotos, historia, especificaciones técnicas y curiosidades.
+</p> -->
+
+<p>
+A continuacion le presentamos una lista de los autos que han pasado por nuestras manos.
 </p>
 
-<div>
-  <router-outlet />
+<div class="container">
+  @for (car of cars; track $index) {
+    <app-car-card [car]=car ></app-car-card>
+  }
 </div>
+
+<!-- <div>
+  <router-outlet />
+</div> -->
