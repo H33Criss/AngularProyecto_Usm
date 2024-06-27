@@ -30,7 +30,7 @@
 
 <br/>
 
-<a  align="left"  href="https://static.vecteezy.com/system/resources/thumbnails/017/197/488/small_2x/pdf-icon-on-transparent-background-free-png.png" target="_blank" >Ir al PDF</a>
+<a  align="left"  href="https://github.com/H33Criss/AngularProyecto_Usm/blob/main/src/assets/mock/Mockup%20proyecto%20angular.pdf" target="_blank" >Ir al PDF</a>
 
 ###
 
