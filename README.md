@@ -30,7 +30,7 @@
 
 <br/>
 
-<a  align="left"  href="https://github.com/H33Criss/AngularProyecto_Usm/blob/main/src/assets/mock/Mockup%20proyecto%20angular.pdf" target="_blank" >Ir al PDF</a>
+<a  align="left"  href="https://raw.githubusercontent.com/H33Criss/AngularProyecto_Usm/main/src/assets/mock/Mockup%20proyecto%20angular.pdf" target="_blank" >Ir al PDF</a>
 
 ###
 
