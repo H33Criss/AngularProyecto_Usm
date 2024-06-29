@@ -1,7 +1,42 @@
-<p>
-
-  Descripción breve de la exposición: Un resumen sobre qué trata la exposición, su propósito y una invitación para
-  explorar más.
-  Imagen destacada: Una imagen impactante de un auto clásico o una vista general de la exposición.
-  Eventos próximos: Información sobre próximos eventos, exposiciones o encuentros de autos clásicos.
-</p>
+<div id="carouselExampleCaptions" class="carousel slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+      aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner carusel-props">
+    <div class="carousel-item active">
+      <img src="assets/ambient/3.png" class="d-block w-100 carusel-image" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Galería</h5>
+        <p>Encuentra autos de lujo y exclusivos en el mundo.</p>
+        <button mat-stroked-button class="mb-5 mt-2">Ver colección</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/ambient/1.jpg" class="d-block w-100 carusel-image" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Eventos</h5>
+        <p>Nuestras restauraciones, desafios superados y eventos con la comunidad.</p>
+        <button mat-stroked-button class="mb-5 mt-2">Ver Proyectos</button>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <img src="assets/ambient/2.jpg" class="d-block w-100 carusel-image" alt="...">
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Recursos</h5>
+        <p>Descarga nuestras guías, tutoriales o manuales.</p>
+        <button mat-stroked-button class="mb-5 mt-2">Ver Recursos</button>
+      </div>
+    </div>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>

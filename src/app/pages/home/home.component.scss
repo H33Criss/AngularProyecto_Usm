@@ -1,0 +1,34 @@
+.carusel-image {
+  height: calc(100vh * 0.7);
+  object-fit: cover !important;
+}
+
+.carousel-inner {
+  position: relative;
+}
+
+.carousel-inner .carousel-item {
+  position: relative;
+}
+
+//gradiente negro sutil, para hacer notar lo textos blancos
+.carousel-inner .carousel-item::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 80%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  z-index: 1;
+}
+
+//para poner el texto sobre el gradiente after
+.carousel-caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  text-align: center;
+}
