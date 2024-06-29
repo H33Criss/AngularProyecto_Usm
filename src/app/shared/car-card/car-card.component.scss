@@ -1,65 +1,98 @@
 .center {
-    justify-content: center;
-    width: 100%;
+  justify-content: center;
+  width: 100%;
 }
 
 .cardHeader {
-    justify-content: center;
-    padding-bottom: 16px;
-    font-size: 25px;
+  justify-content: center;
+  padding-bottom: 16px;
+  font-size: 25px;
 }
 
 .detailButton {
-    justify-content: center;
-    width: 100%;
-    padding-top: auto;
-    border-radius: 0 0 5px 5px;
-
+  justify-content: center;
+  width: 100%;
+  padding-top: auto;
+  border-radius: 0 0 5px 5px;
 }
 
 .detailButtonText {
-    color: white;
+  color: white;
 }
 
 .card {
-    width: 300px;
-    height: 427px;
-    color: white;
-    border-radius: 5px;
-    display: flex;
-    flex-direction: column;
+  width: 300px;
+  height: 427px;
+  color: white;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  background-color: rgb(31, 31, 31);
+  // transition: all 0.3s;
+  border: none !important;
+}
+//Hover effects
+.card:hover {
+  border-top: 4px solid #810081 !important;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+.card:hover .carImage {
+  transform: translate(10px, -50px) rotateZ(-2deg);
+}
+.card:hover .cardFooter {
+  opacity: 1;
+  visibility: visible;
+}
+.card:hover .card-content {
+  transform: translateY(-50px) !important;
+}
+
+//Solo para la animacion
+.card-content {
+  transition: all 0.3s;
 }
 
 .mdc-card__actions {
-    padding: 0px;
+  padding: 0px;
 }
 
 .carDescription {
-    padding: 0px 8px 16px 8px;
-    font-size: 11px;
-    text-align: start;
+  padding: 0px 8px 16px 8px;
+  font-size: 11px;
+  text-align: start;
+  height: 100px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4; /* Número de líneas que deseas mostrar */
+  -webkit-box-orient: vertical;
 }
 
 .carImage {
-    padding: 24px 12px 24px 12px;
-    width: 100%;
-    height: 177px;
+  padding: 24px 12px 24px 12px;
+  width: 100%;
+  height: 177px;
+  transition: all 0.3s;
 }
 
 .container {
-    padding: 12px 0px 12px 0px;
+  padding: 12px 0px 12px 0px;
 }
 
 .cardFooter {
-    position: absolute;
-    bottom: 0px;
-    right: 0px;
-    left: 0px;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  left: 0px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.5s;
 }
 
 .likeButton {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    color: #810081;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  color: #810081;
 }

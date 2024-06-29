@@ -17,11 +17,11 @@ export const routes: Routes = [
     component: AutosComponent,
     title: 'Autos',
     children: [
-      // {
-      //   path: 'lista',
-      //   title: 'Lista de Autos',
-      //   component: ListaComponent,
-      // },
+      {
+        path: 'lista',
+        title: 'Lista de Autos',
+        component: ListaComponent,
+      },
       {
         path: ':id',
         title: 'Auto detalle',
