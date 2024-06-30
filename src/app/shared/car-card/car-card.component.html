@@ -17,7 +17,7 @@
 
     <div class="cardFooter">
       <mat-card-actions class="detailButton">
-        <button mat-fab extended class="detailButton">
+        <button [routerLink]="['/autos', car.id]" mat-fab extended class="detailButton">
           <mat-icon>menu</mat-icon>
           Ver detalles
         </button>

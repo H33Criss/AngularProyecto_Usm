@@ -4,6 +4,7 @@ import { MatCardModule } from '@angular/material/card';
 import { Car } from '../../models/cars.model';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
+import { Router, RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-car-card',
@@ -12,7 +13,8 @@ import { MatIconModule } from '@angular/material/icon';
     MatCardModule,
     MatButtonModule,
     MatIconModule,
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   templateUrl: './car-card.component.html',
   styleUrl: './car-card.component.scss'
