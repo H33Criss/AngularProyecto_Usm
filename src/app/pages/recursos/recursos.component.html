@@ -1,7 +1,29 @@
-<p>
+<h1>
+  A continuacion le presentamos una lista de recursos.
+</h1>
+<h2></h2>
+  <div class="container">
+    @for (recurso of recursos; track $index) {
+      <div class="cardRecurso">
+          <div class="imagen" >
+            <img width="320px" height="450px" src="{{recurso.url}}" alt="">
+          </div>
+          <div class="contenidoText">
+            <div style="padding: 0.5cm;"><h3>{{recurso.name}}</h3></div>
 
-  Guías de Restauración: Artículos prácticos y tutoriales paso a paso sobre cómo restaurar diferentes componentes de
-  autos clásicos, desde motores hasta interiores.
-  Eventos de la Industria: Calendario de eventos globales de autos clásicos, ferias de automóviles, subastas y
-  conferencias relevantes para la comunidad.
-</p>
+            <div class="descriptionText">
+
+              <p>{{recurso.description}}</p>
+              <!-- <h4>{{recurso.description}}</h4> -->
+
+            </div>
+
+            <button mat-fab color="primary" style="margin-left: 0.5cm; width: auto; padding: 1cm;">Más información</button>
+
+
+          </div>
+      </div>
+    }
+  </div>
+
+

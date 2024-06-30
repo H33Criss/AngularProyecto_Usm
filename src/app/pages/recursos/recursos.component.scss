@@ -1,0 +1,39 @@
+.cardList{
+  display: flex;
+  flex-direction: column;
+}
+
+.container{
+  background-color: rgba(23, 23, 23, 0.454);
+  padding-left: 0%
+}
+.imagen{
+  object-fit: fill;
+
+}
+
+
+.cardRecurso{
+  height: calc(100vh*0.485);
+  display: flex;
+  width: 1320px;
+  margin-top: 1cm;
+}
+
+.contenidoText{
+  height: 100%;
+  flex-direction: column;
+
+}
+
+.descriptionText{
+  padding: 0.5cm;
+  height: 60%;
+
+}
+
+h1{
+  padding: 0px 8px 16px 8px;
+  font-size: 25px;
+  text-align: center;
+}
