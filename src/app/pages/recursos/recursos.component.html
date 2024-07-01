@@ -5,23 +5,18 @@
   <div class="container">
     @for (recurso of recursos; track $index) {
       <div class="cardRecurso">
-          <div class="imagen" >
-            <img width="320px" height="450px" src="{{recurso.url}}" alt="">
+        <img class="imagen"  src="{{recurso.url}}" alt="">
+        <div class="flex flex-column" style="display: flex; flex-direction: column; height: 100%;">
+          <div style="padding-left: 1cm;">
+            <h3>{{recurso.name}}</h3>
           </div>
-          <div class="contenidoText">
-            <div style="padding: 0.5cm;"><h3>{{recurso.name}}</h3></div>
-
-            <div class="descriptionText">
-
-              <p>{{recurso.description}}</p>
-              <!-- <h4>{{recurso.description}}</h4> -->
-
-            </div>
-
-            <button mat-fab color="primary" style="margin-left: 0.5cm; width: auto; padding: 1cm;">Más información</button>
-
-
+          <div class="contenidoText" style="padding: 1cm;">
+            <p>{{recurso.description}}</p>
           </div>
+          <div style=" margin-top: auto; padding: 1cm;">
+            <button mat-fab color="primary" style="width: 20%; box-sizing: border-box;">Más información</button>
+          </div>
+        </div>
       </div>
     }
   </div>

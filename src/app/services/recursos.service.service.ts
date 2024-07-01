@@ -29,25 +29,25 @@ export class RecursosService {
       id: '4',
       name: 'Guía de Mantenimiento',
       description: 'Mantener tu vehículo en buen estado es esencial para su longevidad y rendimiento. Esta guía proporciona consejos y trucos para el mantenimiento regular del automóvil, desde cambios de aceite hasta la inspección de frenos y neumáticos.',
-      url: 'https://recursos.reparacion-vehiculos.es/hs-fs/hubfs/Guias/ebook%2026%20-%20Calefacci%C3%B3n/LOC%20-%20Gu%C3%ADa%20Elemental%20del%20sistema%20de%20calefacci%C3%B3n%20del%20coche%20-%20Portada.png?width=900&height=934&name=LOC%20-%20Gu%C3%ADa%20Elemental%20del%20sistema%20de%20calefacci%C3%B3n%20del%20coche%20-%20Portada.png'
+      url: 'https://www.renovetec.com/irim/images/guia2elaboracionplanesdemantenimientov12red.png'
     },
     {
       id: '5',
       name: 'Innovaciones Tecnológicas',
       description: 'El mundo del automóvil está en constante evolución gracias a las innovaciones tecnológicas. Este recurso se centra en las últimas tendencias y avances, como los vehículos autónomos, la inteligencia artificial en la conducción y los sistemas de entretenimiento a bordo.',
-      url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR06XDsuc87ZMpypnIeexwFVOsmQ3gn6WlQcg&s'
+      url: 'https://www.epitech-it.es/wp-content/uploads/2023/02/pexels-photo-2599244.jpeg'
     },
     {
       id: '6',
       name: 'Técnicas de Conducción',
       description: 'Aprender técnicas de conducción avanzadas puede mejorar tu experiencia al volante y aumentar la seguridad en la carretera. Este recurso cubre desde técnicas de conducción defensiva hasta habilidades necesarias para manejar en condiciones adversas.',
-      url: 'https://www.drivingtechniques.com/images/tecnicas-de-conduccion.jpg'
+      url: 'https://images.cdn2.buscalibre.com/fit-in/500x500/d2/31/d231cac3ada4c53c006ca6e68bc6a670.jpg'
     },
     {
       id: '7',
       name: 'Accesorios y Personalización',
       description: 'Personalizar tu vehículo puede hacerlo más cómodo y reflejar tu estilo personal. Este recurso explora una variedad de accesorios y opciones de personalización, desde mejoras en el interior hasta modificaciones exteriores.',
-      url: 'https://www.personalizecar.com/images/accesorios-y-personalizacion.jpg'
+      url: 'https://editorialgg.com/media/catalog/product/cache/1/image/9df78eab33525d08d6e5fb8d27136e95/4/d/4d83f9917ca40623ba511de99d709215.jpg'
     }
   ];
   constructor() { }
