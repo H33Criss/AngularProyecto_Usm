@@ -40,15 +40,30 @@
 
 <h3 align="left">💻 Levantar el proyecto </h3>
 
-###
+1. Clonar el repositorio.
+
+2. Tener instalado `@angular/cli`, sino instalarlo con:
+
+```bash
+npm install --global @angular/cli
+```
+
+4. Instalar dependencias en el proyecto
+
 ```bash
 npm install
+```
+
+5. Levantar el proyecto
+
+```bash
 ng serve
 ```
-###
 
 <br clear="both" />
 
 <h3 align="left">➕ Variables de entorno</h3>
+
+_Aun no requeridas_
 
 ###

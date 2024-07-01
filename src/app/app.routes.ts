@@ -3,8 +3,8 @@ import { AutosComponent } from './pages/autos/autos.component';
 import { ListaComponent } from './pages/autos/lista/lista.component';
 import { ByIdComponent } from './pages/autos/by-id/by-id.component';
 import { HomeComponent } from './pages/home/home.component';
-import { ProyectosDestacadosComponent } from './pages/proyectos-destacados/proyectos-destacados.component';
 import { RecursosComponent } from './pages/recursos/recursos.component';
+import { EventosComponent } from './pages/eventos/eventos.component';
 
 export const routes: Routes = [
   {
@@ -35,9 +35,9 @@ export const routes: Routes = [
     ],
   },
   {
-    path: 'proyectos-destacados',
-    component: ProyectosDestacadosComponent,
-    title: 'Proyectos Destacados',
+    path: 'eventos',
+    component: EventosComponent,
+    title: 'Eventos',
   },
   {
     path: 'recursos',

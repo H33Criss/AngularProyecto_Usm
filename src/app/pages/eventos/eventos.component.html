@@ -1,0 +1,21 @@
+<div class="pt-5">
+  <h3 class="title-evento">Eventos</h3>
+  <div class="  gap-5 d-flex flex-row flex-wrap w-100 justify-content-center">
+    @for (evento of eventos; track $index) {
+    <div class="card-evento ">
+      <img class="card-image-evento" src={{evento.image}}>
+      <div class=" py-2">
+        <h6 class="card-title-evento">{{evento.title}}</h6>
+        <small class="d-block mb-3">{{evento.fecha}}</small>
+        <div class="card-description">
+          <p>{{evento.descripcion}}</p>
+        </div>
+        <!-- Spacer? -->
+        <button class="mt-4 card-button-evento">Obtener mas información</button>
+      </div>
+    </div>
+
+    }
+
+  </div>
+</div>

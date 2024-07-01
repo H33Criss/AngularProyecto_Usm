@@ -1,0 +1,36 @@
+.card-evento {
+  width: calc(100vw * 0.2);
+  height: calc(100vh * 0.63);
+}
+
+.card-image-evento {
+  object-fit: cover;
+  width: 100%;
+  height: calc(100vh * 0.25);
+}
+
+.card-description {
+  overflow: hidden;
+  text-overflow: ellipsis !important;
+  height: 100px;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+}
+
+.card-button-evento {
+  background-color: transparent;
+  border: none;
+  color: white;
+  border-bottom: 1px solid white;
+}
+
+.card-title-evento {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.title-evento {
+  font-weight: bold;
+  margin-left: calc(100vw * 0.17);
+}
