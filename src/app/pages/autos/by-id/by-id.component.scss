@@ -1,0 +1,88 @@
+.header {
+  max-width: 100%;
+  height: calc(100vh * 0.4);
+  width: 100vw;
+  object-fit: cover;
+}
+
+.image-container {
+  position: relative;
+  display: inline-block;
+}
+
+.image-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0)),
+    linear-gradient(to bottom, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0));
+}
+
+.container {
+  position: absolute;
+  top: calc(100vh * 0.3);
+  left: 0;
+  // left: calc(100vw * 0.08);
+  display: flex;
+  align-content: center;
+  right: 0;
+}
+
+.profileImage {
+  width: 300px;
+  height: 300px;
+  border-image: 310px white;
+  display: block;
+  margin: 0px;
+}
+
+.button {
+  padding: 32px 0 0 0;
+}
+
+.editButton {
+  justify-content: center;
+  width: 300px;
+  padding-top: auto;
+  border-radius: 0 0 5px 5px;
+  // position: absolute;
+  // bottom: 0px;
+}
+
+.infoSpan {
+  padding: 32px 0 0 32px;
+}
+
+.mat-mdc-card-header {
+  display: flex;
+  padding: 16px 16px 0;
+  flex-direction: column;
+}
+
+.mat-headline-large {
+}
+
+.card {
+  color: white;
+  background-color: #110802;
+  border-radius: 0;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.photoCard {
+  background-color: white;
+  border-radius: 0;
+}
+
+.backButton {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  color: white;
+  z-index: 1000px;
+  margin-top: 100px;
+}

@@ -5,6 +5,8 @@ export class Car {
     brand: string
     price: string
     image: string
+    profileImage?: string
+    headerImage?: string
     hp: number
     description?: string
     like?: boolean

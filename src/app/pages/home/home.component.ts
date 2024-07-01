@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { MatButton } from '@angular/material/button';
+import { Router } from '@angular/router';
 
 @Component({
   standalone: true,
@@ -8,4 +9,10 @@ import { MatButton } from '@angular/material/button';
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss',
 })
-export class HomeComponent {}
+export class HomeComponent {
+  constructor(private router: Router) {}
+
+  public nagivateTo(path: string): void {
+    this.router.navigate([path]);
+  }
+}
