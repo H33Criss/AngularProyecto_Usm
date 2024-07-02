@@ -1,6 +1,10 @@
 .card-evento {
-  width: calc(100vw * 0.2);
+  width: 300px !important;
   height: calc(100vh * 0.63);
+}
+.card-evento-list {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .card-image-evento {
