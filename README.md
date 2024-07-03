@@ -70,5 +70,5 @@ _Aun no requeridas_
 
 <h3 align ="left">🌎 Preview en producción:</h3>
 
-<a href="34.176.188.106" target="_blank">Link de la aplicación</a>
+<a href="https://34.176.188.106" target="_blank">Link de la aplicación</a>
 ###
