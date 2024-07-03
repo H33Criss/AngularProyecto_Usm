@@ -67,3 +67,8 @@ ng serve
 _Aun no requeridas_
 
 ###
+
+<h3 align ="left">🌎 Preview en producción:</h3>
+
+<a href="34.176.188.106" >Link de la aplicación</a>
+###
