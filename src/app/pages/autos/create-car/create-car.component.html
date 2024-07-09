@@ -6,7 +6,7 @@
     <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
   
       <mat-form-field appearance="outline">
-        <mat-label>Model</mat-label>
+        <mat-label>Modelo del auto</mat-label>
         <input matInput formControlName="model" required>
         <mat-error *ngIf="carForm.get('model')!.touched && carForm.get('model')!.invalid">
             <span *ngIf="carForm.get('model')!.errors! &&
@@ -20,7 +20,7 @@
       </mat-form-field>
   
       <mat-form-field appearance="outline">
-        <mat-label>Brand</mat-label>
+        <mat-label>Marca</mat-label>
         <input matInput formControlName="brand" required>
         <mat-error *ngIf="carForm.get('brand')!.touched && carForm.get('brand')!.invalid">
             <span *ngIf="carForm.get('brand')!.errors! &&
@@ -36,7 +36,7 @@
       </mat-form-field>
   
       <mat-form-field appearance="outline">
-        <mat-label>Price</mat-label>
+        <mat-label>Precio</mat-label>
         <input matInput formControlName="price" required>
         <mat-error *ngIf="carForm.get('price')!.touched && carForm.get('price')!.invalid">
             <span *ngIf="carForm.get('price')!.errors! &&
@@ -56,7 +56,7 @@
       </mat-form-field>
   
       <mat-form-field appearance="outline">
-        <mat-label>Card Image (URL)</mat-label>
+        <mat-label>Imagen de presentacion (URL)</mat-label>
         <input matInput formControlName="image" required>
         <mat-error *ngIf="carForm.get('image')!.touched && carForm.get('image')!.invalid">
             <span *ngIf="carForm.get('image')!.errors! &&
@@ -72,7 +72,7 @@
       </mat-form-field>
 
       <mat-form-field class="form-field full-width" appearance="outline">
-        <mat-label>Profile Image (URL)</mat-label>
+        <mat-label>Imagen de perfil (URL)</mat-label>
         <input matInput formControlName="profileImage">
         <mat-error *ngIf="carForm.get('profileImage')!.touched && carForm.get('profileImage')!.invalid">
             <span *ngIf="carForm.get('profileImage')!.errors! &&
@@ -88,7 +88,7 @@
       </mat-form-field>
 
       <mat-form-field class="form-field full-width" appearance="outline">
-        <mat-label>Header Image (URL)</mat-label>
+        <mat-label>Imagen del header (URL)</mat-label>
         <input matInput formControlName="headerImage">
         <mat-error *ngIf="carForm.get('headerImage')!.touched && carForm.get('headerImage')!.invalid">
             <span *ngIf="carForm.get('headerImage')!.errors! &&
@@ -104,7 +104,7 @@
       </mat-form-field>
 
       <mat-form-field class="form-field full-width" appearance="outline">
-        <mat-label>Horse power</mat-label>
+        <mat-label>Caballos de fuerza</mat-label>
         <input matInput formControlName="hp">
         <mat-error *ngIf="carForm.get('hp')!.touched && carForm.get('hp')!.invalid">
             <span *ngIf="carForm.get('hp')!.errors! &&
