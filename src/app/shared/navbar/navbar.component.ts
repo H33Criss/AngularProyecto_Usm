@@ -10,6 +10,7 @@ import { MatMenuItem, MatMenuModule } from '@angular/material/menu';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { routes } from '../../app.routes';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-shared-navbar',
@@ -29,5 +30,6 @@ import { routes } from '../../app.routes';
   styleUrl: './navbar.component.scss',
 })
 export class NavbarComponent {
+  public environment = environment;
   public menuItems = routes;
 }

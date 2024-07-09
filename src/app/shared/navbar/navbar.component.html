@@ -14,15 +14,11 @@
     }
   </div>
   <div class="actions flex-config">
-    <button class="py-0 my-0" mat-fab extended [matMenuTriggerFor]="menu">
-      <mat-icon>person</mat-icon>
-      Perfil
+    <button class="py-0 my-0" mat-fab extended>
+      <mat-icon>language</mat-icon>
+      {{environment.production? 'Produccion':'Desarrolllo'}}
     </button>
 
-    <mat-menu #menu="matMenu">
-      <button mat-menu-item routerLink="/profile">Profile</button>
-      <button mat-menu-item>Logout</button>
-    </mat-menu>
   </div>
 
 </mat-toolbar>
