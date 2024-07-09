@@ -36,4 +36,9 @@ export class ByIdComponent implements OnInit {
   public navigateTo(path: string): void {
     this.router.navigate([path]);
   }
+
+  deleteCar(id: string) {
+    this.carsService.deleteCar(id)
+    // this.router.navigate([]);
+  }
 }

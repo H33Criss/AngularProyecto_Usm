@@ -84,10 +84,31 @@ export class CarsService {
     return this.myCars.find((car) => car.id === carId);
   }
 
+  public getCarId(): string {
+    const newCarId = this.myCars.length + 1
+    return newCarId.toString()
+  }
+
+  public deleteCar(id: string) {
+    this.myCars = this.myCars.filter(car => car.id != id)
+  }
+
+  public createCar(car: Car) {
+    this.myCars.push(car)
+  }
+
   public updateCar(updatedCar: Car): void {
     const index = this.myCars.findIndex((car) => car.id === updatedCar.id);
     if (index !== -1) {
       this.myCars[index] = updatedCar;
     }
   }
+
+  public likeCar(id: string): void {
+    console.log('hjdfkghjkdfjkhgkldjfghjkl')
+    const car = this.myCars.find(car => car.id === id)
+    if (car) car.like = !car.like
+    else return 
+  }
+
 }

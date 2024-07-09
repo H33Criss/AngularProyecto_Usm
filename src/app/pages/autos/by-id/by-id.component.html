@@ -23,6 +23,10 @@
         <mat-icon>edit</mat-icon>
         Editar
       </button>
+      <button [routerLink]="['/autos/lista']" (click)=deleteCar(car.id!) mat-fab extended class="deleteButton">
+        <mat-icon>clear</mat-icon>
+        Eliminar
+      </button>
     </div>
   </span>
   <span class="infoSpan">

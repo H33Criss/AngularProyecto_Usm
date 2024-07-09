@@ -1,0 +1,151 @@
+<div class="container">
+
+    <p>Para agregar un auto complete el siguiente formulario:</p>
+
+    <form [formGroup]="carForm">
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Model</mat-label>
+        <input matInput formControlName="model" required>
+        <mat-error *ngIf="carForm.get('model')!.touched && carForm.get('model')!.invalid">
+            <span *ngIf="carForm.get('model')!.errors! &&
+              carForm.get('model')!.errors!['required']
+            ">Campo requerido</span>
+            <span *ngIf="carForm.get('model')!.errors! &&
+              carForm.get('model')!.errors!['maxlength']
+            ">No puede superar {{carForm.get('model')!.errors!['maxlength']['requiredLength']}} caracteres</span>
+            <!-- {{ getErrorMessage(carForm.get('model')!) }} -->
+          </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Brand</mat-label>
+        <input matInput formControlName="brand" required>
+        <mat-error *ngIf="carForm.get('brand')!.touched && carForm.get('brand')!.invalid">
+            <span *ngIf="carForm.get('brand')!.errors! &&
+              carForm.get('brand')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('brand')!.errors! &&
+              carForm.get('brand')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('brand')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Price</mat-label>
+        <input matInput formControlName="price" required>
+        <mat-error *ngIf="carForm.get('price')!.touched && carForm.get('price')!.invalid">
+            <span *ngIf="carForm.get('price')!.errors! &&
+              carForm.get('price')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('price')!.errors! &&
+              carForm.get('price')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('price')!.errors!['maxlength']['requiredLength']}}
+            </span>
+            <span *ngIf="carForm.get('price')!.errors! &&
+            carForm.get('price')!.errors!['pattern']
+          ">Solo se permiten numeros
+          </span>
+          </mat-error>
+      </mat-form-field>
+  
+      <mat-form-field appearance="outline">
+        <mat-label>Card Image (URL)</mat-label>
+        <input matInput formControlName="image" required>
+        <mat-error *ngIf="carForm.get('image')!.touched && carForm.get('image')!.invalid">
+            <span *ngIf="carForm.get('image')!.errors! &&
+              carForm.get('image')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('image')!.errors! &&
+              carForm.get('image')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('image')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label>Profile Image (URL)</mat-label>
+        <input matInput formControlName="profileImage">
+        <mat-error *ngIf="carForm.get('profileImage')!.touched && carForm.get('profileImage')!.invalid">
+            <span *ngIf="carForm.get('profileImage')!.errors! &&
+              carForm.get('profileImage')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('profileImage')!.errors! &&
+              carForm.get('profileImage')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('profileImage')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label>Header Image (URL)</mat-label>
+        <input matInput formControlName="headerImage">
+        <mat-error *ngIf="carForm.get('headerImage')!.touched && carForm.get('headerImage')!.invalid">
+            <span *ngIf="carForm.get('headerImage')!.errors! &&
+              carForm.get('headerImage')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('headerImage')!.errors! &&
+              carForm.get('headerImage')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('headerImage')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label>Horse power</mat-label>
+        <input matInput formControlName="hp">
+        <mat-error *ngIf="carForm.get('hp')!.touched && carForm.get('hp')!.invalid">
+            <span *ngIf="carForm.get('hp')!.errors! &&
+              carForm.get('hp')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('hp')!.errors! &&
+              carForm.get('hp')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('hp')!.errors!['maxlength']['requiredLength']}}
+            </span>
+            <span *ngIf="carForm.get('hp')!.errors! &&
+            carForm.get('hp')!.errors!['pattern']
+          ">Solo se permiten numeros
+          </span>
+          </mat-error>
+      </mat-form-field>
+
+      <mat-form-field class="form-field full-width" appearance="outline">
+        <mat-label>Descripcion</mat-label>
+        <input matInput formControlName="description">
+        <mat-error *ngIf="carForm.get('description')!.touched && carForm.get('description')!.invalid">
+            <span *ngIf="carForm.get('description')!.errors! &&
+              carForm.get('description')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="carForm.get('description')!.errors! &&
+              carForm.get('description')!.errors!['maxlength']
+            ">No puede superar 
+             {{carForm.get('description')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+      </mat-form-field>
+  
+      <div class="buttons">
+        <!-- <button mat-raised-button color="primary" type="submit">Submit</button> -->
+        <button mat-raised-button color="primary" type="submit" [disabled]="carForm.invalid">Submit</button>
+
+        <button mat-raised-button [routerLink]="['/autos/lista']" color="warn" type="button">Volver a lista</button>
+
+        <!-- <button mat-raised-button color="warn" type="button" (click)="onReset()">Reset</button> -->
+      </div>
+    </form>
+  <!-- </div> -->

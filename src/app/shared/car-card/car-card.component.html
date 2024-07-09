@@ -1,9 +1,9 @@
 <mat-card class="card">
   <img class="carImage" mat-card-image src={{car.image}} alt="Photo of {{car.model}}">
 
-  <button mat-icon-button appearance="outlined" class="likeButton">
+  <button (click)="onClickLike(car.id!)" mat-icon-button appearance="outlined" class="likeButton">
     @if (car.like) {
-    <mat-icon fontIcon="favorite"></mat-icon>
+    <mat-icon  fontIcon="favorite"></mat-icon>
     }@else {
     <mat-icon fontIcon="favorite_outlined"></mat-icon>
     }
