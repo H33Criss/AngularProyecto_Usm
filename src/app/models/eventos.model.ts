@@ -4,4 +4,5 @@ export class Evento {
   title: string;
   fecha: string;
   descripcion: string;
+  urlNoticia: string;
 }

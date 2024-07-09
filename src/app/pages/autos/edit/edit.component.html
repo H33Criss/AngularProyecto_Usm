@@ -1,16 +1,49 @@
 <div class="container">
   <div class="row pt-5">
     <div class="col-12 col-lg-6 sized-box d-flex justify-content-center justify-content-lg-end">
-      <form class="form-box">
+      <form [formGroup]="form" class="form-box">
         <mat-form-field class="example-full-width">
           <mat-label>Modelo</mat-label>
-          <input matInput placeholder="Ex. Pizza" [(ngModel)]="car.model" name="model">
+          <input matInput formControlName="modelo" placeholder="Toyata subaru MKZ1" [(ngModel)]="car.model">
+          <mat-error *ngIf="form.get('modelo')!.touched && form.get('modelo')!.invalid">
+            <span *ngIf="form.get('modelo')!.errors! &&
+              form.get('modelo')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="form.get('modelo')!.errors! &&
+              form.get('modelo')!.errors!['maxlength']
+            ">No puede superar
+              {{form.get('name')!.errors!['maxlength']['requiredLength']}}
+            </span>
+          </mat-error>
+
+
         </mat-form-field>
         <mat-form-field class="example-full-width">
           <mat-label>Descripción del Auto</mat-label>
-          <textarea matInput [(ngModel)]="car.description" name="description"></textarea>
+          <textarea matInput [(ngModel)]="car.description" formControlName="description"
+            placeholder="Describe porque este auto es tan exclusivo, cuenta su historia."></textarea>
+          <mat-error *ngIf="form.get('description')!.touched && form.get('description')!.invalid">
+            <span *ngIf="form.get('description')!.errors! &&
+              form.get('description')!.errors!['required']
+            ">Campo requerido
+            </span>
+            <span *ngIf="form.get('description')!.errors! &&
+              form.get('description')!.errors!['minlength']
+            ">Al menos deben haber
+              {{form.get('description')!.errors!['minlength']['requiredLength']}}
+              caracteres.
+            </span>
+            <span *ngIf="form.get('description')!.errors! &&
+              form.get('description')!.errors!['maxlength']
+            ">No puede superar los
+              {{form.get('description')!.errors!['maxlength']['requiredLength']}}
+              caracteres.
+            </span>
+          </mat-error>
+
         </mat-form-field>
-        <small>Imagen en la Lista</small>
+        <small>Imagen en la Lista(Opcional)</small>
         <div class="d-flex">
           <mat-form-field class="mr">
             <mat-label>Nueva imagen</mat-label>
@@ -22,7 +55,7 @@
           <button mat-fab extended type="button" color="primary" (click)="fileInputImage.click()">Seleccionar
             Imagen</button>
         </div>
-        <small>Imagen del Perfil</small>
+        <small>Imagen del Perfil(Opcional)</small>
         <div class="d-flex mb-5">
           <mat-form-field class="mr">
             <mat-label>Nueva imagen</mat-label>
@@ -46,7 +79,8 @@
         </div>
         <div class="col-12 col-md-6  d-flex  justify-content-center">
           <div class="d-flex align-items-center card-profile mx-3 p-2">
-            <img class="profileImage" [src]="previewProfileImage || car.profileImage" />
+            <img class="profileImage" [src]="car.profileImage" />
+            <!-- <img class="profileImage" [src]="previewProfileImage || car.profileImage" /> -->
             <small class="my-3">Imagen del Perfil</small>
           </div>
         </div>
