@@ -22,7 +22,7 @@ import { FormsModule } from '@angular/forms';
   templateUrl: './edit.component.html',
   styleUrls: ['./edit.component.scss'],
 })
-export class EditComponent implements OnInit {
+export class EditComponent {
   @ViewChild('fileInputImage', { static: false }) fileInputImage: ElementRef;
   @ViewChild('fileInputProfileImage', { static: false })
   fileInputProfileImage: ElementRef;
@@ -39,7 +39,7 @@ export class EditComponent implements OnInit {
   private originalImage: string | null = null;
   private originalProfileImage: string | null = null;
 
-  // Variables temporales para la previsualización
+  // estas son imagenes temporales, indeppendientes del car del servicio
   public previewImage: string | null = null;
   public previewProfileImage: string | null = null;
 
@@ -51,17 +51,19 @@ export class EditComponent implements OnInit {
     this.activeRouter.params.subscribe((params) => {
       this.cardId = params['id'];
       const carOfService = this.carsService.getCarById(this.cardId);
+      // validacion, si no existe el car
+      if (!carOfService) {
+        router.navigate(['/autos/lista']);
+        return;
+      }
+      //un version del car, con un nuevo espacio en memoria
       const carToEdit = { ...carOfService };
       if (carToEdit) {
         this.car = carToEdit as Car;
-        this.originalImage = this.car.image; // Guardar la imagen original
-        this.originalProfileImage = this.car.profileImage ?? ''; // Guardar la imagen de perfil original
+        this.originalImage = this.car.image;
+        this.originalProfileImage = this.car.profileImage ?? '';
       }
     });
-  }
-
-  ngOnInit(): void {
-    console.log(this.car);
   }
 
   onFileSelected(event: any, isProfileImage: boolean): void {
@@ -70,22 +72,25 @@ export class EditComponent implements OnInit {
       const reader = new FileReader();
       reader.onload = (e: any) => {
         if (isProfileImage) {
+          //Imagen del perfil
           this.selectedFileProfileImage = selectedFile;
           this.selectedFileNameProfileImage = selectedFile.name;
           this.previewProfileImage = e.target.result;
         } else {
+          //imagen que esta en la lista
           this.selectedFileImage = selectedFile;
           this.selectedFileNameImage = selectedFile.name;
           this.previewImage = e.target.result;
           this.car.image = this.previewImage ?? '';
         }
       };
+      //url de la imagen , pero fake(en memoria)
       reader.readAsDataURL(selectedFile);
     }
   }
 
   onSave(event: Event): void {
-    event.preventDefault(); // Evita el comportamiento predeterminado del formulario
+    event.preventDefault(); // evitar el submit default del fomulario
 
     if (this.previewImage) {
       this.car.image = this.previewImage;
@@ -104,12 +109,6 @@ export class EditComponent implements OnInit {
     }
 
     this.carsService.updateCar(this.car);
-    this.router.navigate(['/autos', this.cardId]);
-  }
-
-  onCancel(): void {
-    this.previewImage = this.originalImage; // Restaurar la imagen original
-    this.previewProfileImage = this.originalProfileImage; // Restaurar la imagen de perfil original
     this.router.navigate(['/autos', this.cardId]);
   }
 }
