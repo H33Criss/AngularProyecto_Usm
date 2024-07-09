@@ -1,6 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import {
+  FormBuilder,
+  FormGroup,
+  ReactiveFormsModule,
+  Validators,
+} from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
@@ -13,18 +18,17 @@ import { Router, RouterModule } from '@angular/router';
   standalone: true,
   imports: [
     CommonModule,
-    MatFormFieldModule, 
-    ReactiveFormsModule, 
-    MatInputModule, 
+    MatFormFieldModule,
+    ReactiveFormsModule,
+    MatInputModule,
     MatButton,
-    RouterModule
+    RouterModule,
   ],
   templateUrl: './create-car.component.html',
-  styleUrl: './create-car.component.scss'
+  styleUrl: './create-car.component.scss',
 })
 export class CreateCarComponent {
-
-  carForm: FormGroup
+  carForm: FormGroup;
 
   constructor(
     private readonly carsService: CarsService,
@@ -34,20 +38,24 @@ export class CreateCarComponent {
     this.carForm = this.fb.group({
       model: ['', [Validators.required, Validators.maxLength(30)]],
       brand: ['', [Validators.required, Validators.maxLength(15)]],
-      price: ['', [Validators.required, Validators.pattern("^[0-9]*$")]],
+      price: ['', [Validators.required, Validators.pattern('^[0-9]*$')]],
       image: ['', Validators.required],
       profileImage: ['', Validators.required],
       headerImage: ['', Validators.required],
-      hp: ['', [Validators.required, Validators.maxLength(5), Validators.pattern("^[0-9]*$")]],
-      description: ['', [Validators.required, Validators.maxLength(160)]],
+      hp: [
+        '',
+        [
+          Validators.required,
+          Validators.maxLength(5),
+          Validators.pattern('^[0-9]*$'),
+        ],
+      ],
+      description: ['', [Validators.required, Validators.maxLength(300)]],
     });
 
-    this.carForm.valueChanges.subscribe(values=>{
-      console.log(values)
-    })
-
-    
-    
+    this.carForm.valueChanges.subscribe((values) => {
+      console.log(values);
+    });
   }
 
   onSubmit() {
@@ -63,12 +71,10 @@ export class CreateCarComponent {
         headerImage: this.carForm.get('headerImage')!.value,
         hp: this.carForm.get('hp')!.value,
         description: this.carForm.get('description')!.value,
-      }
-      console.log(newCar)
-      this.carsService.createCar(newCar)
-      this.router.navigate(['/autos/lista'])
+      };
+      console.log(newCar);
+      this.carsService.createCar(newCar);
+      this.router.navigate(['/autos/lista']);
     }
   }
-
-
 }

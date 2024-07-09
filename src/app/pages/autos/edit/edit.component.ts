@@ -72,7 +72,7 @@ export class EditComponent {
             [
               Validators.required,
               Validators.minLength(20),
-              Validators.maxLength(160),
+              Validators.maxLength(300),
             ],
           ],
         });
