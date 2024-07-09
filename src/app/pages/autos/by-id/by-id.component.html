@@ -13,21 +13,20 @@
 
 <div class="container">
   <span>
-    <div>
-      <mat-card class="photoCard" appearance="outlined">
-        <img class="profileImage" src={{car.profileImage}} alt="">
-      </mat-card>
-    </div>
-    <div class="button">
-      <button (click)="navigateTo('/autos/' + carId + '/edit')" mat-fab extended class="editButton">
+
+    <mat-card class="photoCard" appearance="outlined">
+      <img class="profileImage mb-3" src={{car.profileImage}} alt="">
+      <button (click)="navigateTo('/autos/' + carId + '/edit')" mat-fab extended class="w-100 editButton my-1">
         <mat-icon>edit</mat-icon>
         Editar
       </button>
-      <button [routerLink]="['/autos/lista']" (click)=deleteCar(car.id!) mat-fab extended class="deleteButton">
+      <button [routerLink]="['/autos/lista']" (click)=deleteCar(car.id!) mat-fab extended class="w-100 deleteButton">
         <mat-icon>clear</mat-icon>
         Eliminar
       </button>
-    </div>
+    </mat-card>
+
+
   </span>
   <span class="infoSpan">
     <div class="title">
