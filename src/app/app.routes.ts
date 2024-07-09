@@ -5,6 +5,7 @@ import { ByIdComponent } from './pages/autos/by-id/by-id.component';
 import { HomeComponent } from './pages/home/home.component';
 import { RecursosComponent } from './pages/recursos/recursos.component';
 import { EventosComponent } from './pages/eventos/eventos.component';
+import { EditComponent } from './pages/autos/edit/edit.component';
 
 export const routes: Routes = [
   {
@@ -21,6 +22,11 @@ export const routes: Routes = [
         path: 'lista',
         title: 'Lista de Autos',
         component: ListaComponent,
+      },
+      {
+        path: ':id/edit',
+        title: 'Auto editar',
+        component: EditComponent,
       },
       {
         path: ':id',

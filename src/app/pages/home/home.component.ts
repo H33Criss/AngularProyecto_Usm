@@ -12,7 +12,7 @@ import { Router } from '@angular/router';
 export class HomeComponent {
   constructor(private router: Router) {}
 
-  public nagivateTo(path: string): void {
+  public navigateTo(path: string): void {
     this.router.navigate([path]);
   }
 }

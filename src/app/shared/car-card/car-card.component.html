@@ -1,27 +1,25 @@
-<div class="container">
-  <mat-card class="card">
-    <img class="carImage" mat-card-image src={{car.image}} alt="Photo of {{car.model}}">
+<mat-card class="card">
+  <img class="carImage" mat-card-image src={{car.image}} alt="Photo of {{car.model}}">
 
-    <button mat-icon-button appearance="outlined" class="likeButton">
-      @if (car.like) {
-      <mat-icon fontIcon="favorite"></mat-icon>
-      }@else {
-      <mat-icon fontIcon="favorite_outlined"></mat-icon>
-      }
-    </button>
+  <button mat-icon-button appearance="outlined" class="likeButton">
+    @if (car.like) {
+    <mat-icon fontIcon="favorite"></mat-icon>
+    }@else {
+    <mat-icon fontIcon="favorite_outlined"></mat-icon>
+    }
+  </button>
 
-    <mat-card-content class="card-content">
-      <mat-card-header class="cardHeader">{{car.model}}</mat-card-header>
-      <p class="carDescription">{{car.description}}</p>
-    </mat-card-content>
+  <mat-card-content class="card-content">
+    <mat-card-header class="cardHeader">{{car.model}}</mat-card-header>
+    <p class="carDescription">{{car.description}}</p>
+  </mat-card-content>
 
-    <div class="cardFooter">
-      <mat-card-actions class="detailButton">
-        <button [routerLink]="['/autos', car.id]" mat-fab extended class="detailButton">
-          <mat-icon>menu</mat-icon>
-          Ver detalles
-        </button>
-      </mat-card-actions>
-    </div>
-  </mat-card>
-</div>
+  <div class="cardFooter">
+    <mat-card-actions class="detailButton">
+      <button [routerLink]="['/autos', car.id]" mat-fab extended class="detailButton">
+        <mat-icon>menu</mat-icon>
+        Ver detalles
+      </button>
+    </mat-card-actions>
+  </div>
+</mat-card>

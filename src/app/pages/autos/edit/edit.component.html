@@ -1,0 +1,56 @@
+<div class="container">
+  <div class="row pt-5">
+    <div class="col-12 col-lg-6 sized-box d-flex justify-content-center justify-content-lg-end">
+      <form class="form-box">
+        <mat-form-field class="example-full-width">
+          <mat-label>Modelo</mat-label>
+          <input matInput placeholder="Ex. Pizza" [(ngModel)]="car.model" name="model">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Descripción del Auto</mat-label>
+          <textarea matInput [(ngModel)]="car.description" name="description"></textarea>
+        </mat-form-field>
+        <small>Imagen en la Lista</small>
+        <div class="d-flex">
+          <mat-form-field class="mr">
+            <mat-label>Nueva imagen</mat-label>
+            <div class="input-file-wrapper">
+              <input type="file" (change)="onFileSelected($event, false)" class="input-file-custom" #fileInputImage />
+              <input type="text" matInput [value]="selectedFileNameImage" readonly />
+            </div>
+          </mat-form-field>
+          <button mat-fab extended type="button" color="primary" (click)="fileInputImage.click()">Seleccionar
+            Imagen</button>
+        </div>
+        <small>Imagen del Perfil</small>
+        <div class="d-flex mb-5">
+          <mat-form-field class="mr">
+            <mat-label>Nueva imagen</mat-label>
+            <div class="input-file-wrapper">
+              <input type="file" (change)="onFileSelected($event, true)" class="input-file-custom"
+                #fileInputProfileImage />
+              <input type="text" matInput [value]="selectedFileNameProfileImage" readonly />
+            </div>
+          </mat-form-field>
+          <button mat-fab extended type="button" color="primary" (click)="fileInputProfileImage.click()">Seleccionar
+            Imagen</button>
+        </div>
+        <button class="button-submit" extended mat-fab (click)="onSave($event)">Guardar</button>
+      </form>
+    </div>
+    <div class="col-12 col-lg-6  sized-box d-flex py-3 justify-content-center ">
+      <div class="row ">
+        <div class="col-12 col-md-6  d-flex  justify-content-center mt-5 mt-md-0 mb-4 mb-md-0">
+          <app-car-card [car]="car"></app-car-card>
+
+        </div>
+        <div class="col-12 col-md-6  d-flex  justify-content-center">
+          <div class="d-flex align-items-center card-profile mx-3 p-2">
+            <img class="profileImage" [src]="previewProfileImage || car.profileImage" />
+            <small class="my-3">Imagen del Perfil</small>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

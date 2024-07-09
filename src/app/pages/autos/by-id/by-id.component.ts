@@ -10,37 +10,30 @@ import { MatButtonModule } from '@angular/material/button';
 @Component({
   selector: 'app-by-id',
   standalone: true,
-  imports: [
-    MatIcon,
-    MatCardModule,
-    MatButtonModule,
-    CommonModule,
-    RouterLink
-  ],
+  imports: [MatIcon, MatCardModule, MatButtonModule, CommonModule, RouterLink],
   templateUrl: './by-id.component.html',
-  styleUrl: './by-id.component.scss'
+  styleUrl: './by-id.component.scss',
 })
 export class ByIdComponent implements OnInit {
-
-  carId: string
-  car: Car
+  public carId: string;
+  car: Car;
 
   constructor(
-    private readonly carsService : CarsService,
-    private readonly activeRouter : ActivatedRoute,
-    private readonly router : Router
-  ) 
-  {
-    this.activeRouter.params.subscribe(
-      params => {
-        this.carId = params['id']
-      }
-    )
+    private readonly carsService: CarsService,
+    private readonly activeRouter: ActivatedRoute,
+    private readonly router: Router
+  ) {
+    this.activeRouter.params.subscribe((params) => {
+      this.carId = params['id'];
+    });
   }
 
   ngOnInit() {
-    const car = this.carsService.getCarById(this.carId)
-    if (car) this.car = car
+    const car = this.carsService.getCarById(this.carId);
+    if (car) this.car = car;
   }
 
+  public navigateTo(path: string): void {
+    this.router.navigate([path]);
+  }
 }

@@ -19,7 +19,7 @@
       </mat-card>
     </div>
     <div class="button">
-      <button disabled mat-fab extended class="editButton">
+      <button (click)="navigateTo('/autos/' + carId + '/edit')" mat-fab extended class="editButton">
         <mat-icon>edit</mat-icon>
         Editar
       </button>

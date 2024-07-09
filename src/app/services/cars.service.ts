@@ -55,7 +55,8 @@ export class CarsService {
       profileImage: 'assets/car-profile-images/corvette-profile.jpg',
       headerImage: 'assets/car-header-images/corvette-header.png',
       hp: 666,
-      description: 'El Chevrolet Corvette 2015, conocido como el Corvette Stingray, es un deportivo estadounidense con un motor V8 de 6.2 litros que produce 455 caballos de fuerza. Combina alto rendimiento con un diseño elegante y aerodinámico, ofreciendo una experiencia de conducción emocionante y sofisticada.',
+      description:
+        'El Chevrolet Corvette 2015, conocido como el Corvette Stingray, es un deportivo estadounidense con un motor V8 de 6.2 litros que produce 455 caballos de fuerza. Combina alto rendimiento con un diseño elegante y aerodinámico, ofreciendo una experiencia de conducción emocionante y sofisticada.',
       like: false,
     },
     {
@@ -80,6 +81,13 @@ export class CarsService {
   }
 
   public getCarById(carId: string) {
-    return this.myCars.find(car => car.id === carId)
+    return this.myCars.find((car) => car.id === carId);
+  }
+
+  public updateCar(updatedCar: Car): void {
+    const index = this.myCars.findIndex((car) => car.id === updatedCar.id);
+    if (index !== -1) {
+      this.myCars[index] = updatedCar;
+    }
   }
 }
