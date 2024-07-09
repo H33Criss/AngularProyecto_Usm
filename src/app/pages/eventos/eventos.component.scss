@@ -27,6 +27,13 @@
   border: none;
   color: white;
   border-bottom: 1px solid white;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+.card-button-evento:hover {
+  color: #810081;
+  border-bottom: 1px solid #810081;
 }
 
 .card-title-evento {
@@ -36,5 +43,4 @@
 
 .title-evento {
   font-weight: bold;
-  margin-left: calc(100vw * 0.17);
 }
