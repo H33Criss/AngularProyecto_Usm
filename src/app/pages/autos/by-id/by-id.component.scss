@@ -79,12 +79,14 @@
   border-radius: 0;
   padding: 16px;
   border-radius: 8px;
-  width: calc(100vw * 0.6);
+  max-width: calc(100vw * 0.56);
+  min-width: calc(100vw * 0.4);
 }
 
 .photoCard {
   // background-color: white;
-  width: calc(100vw * 0.2);
+  max-width: calc(100vw * 0.2);
+  min-width: calc(100vw * 0.12);
   background-color: transparent;
   border-color: transparent;
   border-radius: 0;
